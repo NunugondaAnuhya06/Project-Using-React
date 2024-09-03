@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .frm-login {
+            padding: 20px;
+            border:1px solid gray;
+            border-radius: 10px;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            border:1px solid black;
+        }
+        .nav-bar span {
+            width: 100px;
+            border:1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <script type="text/babel">
+
+        function Navbar(){
+            return(
+                <nav className="nav-bar">
+                    <span>Home </span>
+                    <span>Shop </span>
+                    <span>Blog </span>
+                    <span>Contact </span>
+                </nav>
+            )
+        }
+
+        function Login()
+        {
+            return (
+                <div className="container">
+                    <form className="frm-login">
+                        <h2>Login</h2>
+                        <dl>
+                            <dt>User Name</dt>
+                            <dd><input type="text" /> </dd>
+                            <dt>Password</dt> 
+                            <dd><input type="password"/> </dd> 
+                        </dl>
+                        <button>Login</button>
+                    </form>
+                </div>
+            )
+        }
+
+        ReactDOM.render( 
+            <section>
+                <Navbar />
+                <Login />
+            </section> , 
+            document.getElementById("root"));
+    </script>
+</head>
+<body>
+    <noscript>Please enable JavaScript on your browser</noscript>
+    <div id="root"></div>
+</body>
+</html>
